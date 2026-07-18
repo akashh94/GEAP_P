@@ -1,0 +1,28 @@
+{
+  "name": "geap-etrade-poc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Internal GEAP proof-of-concept with a framework-free E*TRADE-like mock site.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/unit/*.test.js tests/integration/*.test.js",
+    "test:e2e": "node tests/e2e/e2e.test.js",
+    "test:all": "npm test && npm run test:e2e"
+  },
+  "dependencies": {
+    "@google-cloud/vertexai": "^1.12.0",
+    "compression": "^1.8.1",
+    "dotenv": "^17.4.2",
+    "express": "^4.19.2",
+    "express-session": "^1.19.0",
+    "oauth-1.0a": "^2.2.6"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.1.0"
+  }
+}

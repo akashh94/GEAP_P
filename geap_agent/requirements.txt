@@ -1,0 +1,6 @@
+google-adk[gcp]
+google-cloud-firestore
+python-dotenv
+fastapi
+uvicorn[standard]
+sse-starlette

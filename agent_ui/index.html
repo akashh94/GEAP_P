@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEAP Agent Chat</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>✦ GEAP Agent</h1>
+    <span>Powered by Google ADK</span>
+  </header>
+
+  <div class="chat-container">
+    <div id="error-bar" class="error-bar"></div>
+    <div id="chat-messages"></div>
+
+    <form id="chat-form" class="composer">
+      <input id="chat-input" type="text" placeholder="Ask about your portfolio, trading, research..." autofocus>
+      <button id="chat-send" type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="js/adk.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Deploy-time dependencies (CI and local), pinned to the versions the agent
+# was validated against. Keep in sync with AGENT_REQUIREMENTS in
+# deployment/deploy.py (the deployed engine's runtime dependencies).
+google-adk~=2.4.0
+google-cloud-aiplatform[agent_engines,adk]~=1.160.0
+google-genai~=2.11.0
+python-dotenv~=1.2
