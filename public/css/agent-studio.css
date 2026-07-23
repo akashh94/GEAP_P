@@ -1,0 +1,178 @@
+/* ═══════════════════════════════
+   3. AGENT STUDIO STYLES
+   ═══════════════════════════════ */
+
+.studio-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr 280px;
+  gap: 20px;
+  height: calc(100vh - 200px);
+  min-height: 500px;
+}
+
+/* -- Left sidebar: agent list -- */
+.studio-sidebar {
+  background: var(--geap-surface);
+  border: 1px solid var(--geap-border);
+  border-radius: var(--geap-radius-lg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.studio-sidebar-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--geap-text-secondary);
+  padding: 16px 16px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.studio-agent-list {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.studio-agent-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--geap-radius-md);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.studio-agent-item:hover {
+  background: var(--geap-surface-secondary);
+}
+
+.studio-agent-item.active {
+  background: var(--geap-blue-light);
+  border-color: rgba(79, 142, 247, 0.2);
+}
+
+.studio-agent-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--geap-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.studio-agent-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--geap-text);
+}
+
+.studio-agent-desc {
+  font-size: 0.6875rem;
+  color: var(--geap-text-tertiary);
+}
+
+/* -- Center canvas -- */
+.studio-canvas {
+  background: var(--geap-surface);
+  border: 1px solid var(--geap-border);
+  border-radius: var(--geap-radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.studio-canvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--geap-border);
+}
+
+.studio-canvas-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--geap-text);
+  margin: 0;
+}
+
+/* -- Right config panel -- */
+.studio-config {
+  background: var(--geap-surface);
+  border: 1px solid var(--geap-border);
+  border-radius: var(--geap-radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.studio-config-section {
+  padding: 16px;
+  border-bottom: 1px solid var(--geap-border);
+}
+
+.studio-config-section:last-child {
+  border-bottom: none;
+}
+
+.studio-config-title {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--geap-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+/* -- Test console -- */
+.studio-test-console {
+  background: var(--geap-surface-secondary);
+  border: 1px solid var(--geap-border);
+  border-radius: var(--geap-radius-md);
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.test-console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: var(--geap-surface);
+  border-bottom: 1px solid var(--geap-border);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--geap-text);
+}
+
+.test-console-body {
+  padding: 16px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.8125rem;
+  color: var(--geap-text-secondary);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* -- Studio responsive -- */
+@media (max-width: 1100px) {
+  .studio-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .studio-sidebar,
+  .studio-config {
+    max-height: 300px;
+  }
+}
+

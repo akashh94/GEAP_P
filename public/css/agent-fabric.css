@@ -1,0 +1,212 @@
+/* ═══════════════════════════════
+   4. AGENT FABRIC STYLES
+   ═══════════════════════════════ */
+
+.fabric-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.fabric-agents-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.fabric-agent-card {
+  background: var(--geap-surface);
+  border: 1px solid var(--geap-border);
+  border-radius: var(--geap-radius-lg);
+  padding: 20px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fabric-agent-card:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: var(--geap-shadow-md);
+}
+
+.fabric-agent-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.fabric-agent-header .agent-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--geap-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.fabric-agent-header .agent-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--geap-text);
+}
+
+.fabric-agent-header .agent-status {
+  font-size: 0.7rem;
+  color: var(--geap-text-tertiary);
+}
+
+.fabric-agent-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.fabric-metric {
+  text-align: center;
+}
+
+.fabric-metric .metric-value {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  color: var(--geap-text);
+}
+
+.fabric-metric .metric-label {
+  font-size: 0.6875rem;
+  color: var(--geap-text-tertiary);
+  margin-top: 2px;
+}
+
+/* -- Activity log -- */
+.fabric-activity-log {
+  background: var(--geap-surface);
+  border: 1px solid var(--geap-border);
+  border-radius: var(--geap-radius-lg);
+  overflow: hidden;
+}
+
+.activity-log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--geap-border);
+  font-weight: 600;
+  color: var(--geap-text);
+}
+
+.activity-log-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.log-entry {
+  display: grid;
+  grid-template-columns: 110px 110px 1fr 80px;
+  gap: 12px;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--geap-surface-tertiary);
+  font-size: 0.8125rem;
+  align-items: center;
+  transition: background 0.12s ease;
+}
+
+.log-entry:hover {
+  background: var(--geap-surface-secondary);
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+.log-timestamp {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.6875rem;
+  color: var(--geap-text-tertiary);
+}
+
+.log-agent {
+  font-weight: 500;
+  color: var(--geap-text);
+}
+
+.log-query {
+  color: var(--geap-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* -- Governance panel -- */
+.governance-panel {
+  background: var(--geap-surface);
+  border: 1px solid var(--geap-border);
+  border-radius: var(--geap-radius-lg);
+  padding: 20px;
+}
+
+.governance-rule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--geap-surface-tertiary);
+}
+
+.governance-rule:last-child {
+  border-bottom: none;
+}
+
+.governance-rule .rule-label {
+  font-size: 0.8125rem;
+  color: var(--geap-text);
+}
+
+.governance-rule .rule-desc {
+  font-size: 0.75rem;
+  color: var(--geap-text-tertiary);
+}
+
+/* -- Routing map -- */
+.routing-map {
+  background: var(--geap-surface);
+  border: 1px solid var(--geap-border);
+  border-radius: var(--geap-radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.routing-map-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* -- Fabric responsive -- */
+@media (max-width: 1100px) {
+  .fabric-agents-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .fabric-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .log-entry {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
